@@ -5,7 +5,7 @@
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
+        >vue-cli documentation {{ dataValue }}</a
       >.
     </p>
     <h3>Installed CLI Plugins</h3>
@@ -123,7 +123,10 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+  @Prop() msg!: string;
+
+  dataValue: string;
+  dataVariable2: number;
 }
 </script>
 
