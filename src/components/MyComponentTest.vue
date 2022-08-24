@@ -4,6 +4,7 @@
     <p>{{ textoComputed() }}</p>
     <p>{{ property }}</p>
     <p>{{ getProperty() }}</p>
+    <p>{{ vuexExampleText }}</p>
   </div>
 </template>
 
@@ -15,6 +16,8 @@ export default class MyComponentTest extends Vue {
   @Prop({ default: "valor defecto" }) readonly textToDisplay: string;
 
   property = "heyyyyy";
+
+  vuexExampleText = this.$store.state.dataVuexExample;
 
   textoComputed() {
     return this.textToDisplay;
