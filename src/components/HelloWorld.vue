@@ -66,16 +66,21 @@
       </li>
     </ul>
     <my-component-test :textToDisplay="dataValue"></my-component-test>
+    <options-api-component-vue
+      :textToDisplay="dataValue"
+    ></options-api-component-vue>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import MyComponentTest from "./MyComponentTest.vue";
+import OptionsApiComponentVue from "./OptionsApiComponent.vue";
 
 @Component({
   components: {
     MyComponentTest,
+    OptionsApiComponentVue,
   },
 })
 export default class HelloWorld extends Vue {
